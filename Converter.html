@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Converter</title>
+</head>
+<style>
+    td{
+        width: 150px;
+        height: 50px;
+    }
+</style>
+<body>
+<form action="get" >
+    <table border="1px solid pink" style="text-align: center">
+        <tr>
+            <td>Amount</td>
+            <td>From currency</td>
+            <td>To currency</td>
+        </tr>
+        <tr>
+            <td><input type="number" id="amount"></td>
+            <td>
+                <select name="Fromcurrency" id="FC">
+                <option value="vnd">VietNamDong</option>
+                <option value="usd">USD</option>
+                <option value="eur">Euro</option>
+            </select>
+            </td>
+            <td><select name="Tocurrency" id="TC">
+                <option value="vnd">VietNamDong</option>
+                <option value="usd">USD</option>
+                <option value="eur">Euro</option>
+            </select>
+            </td>
+            <td><input type="button" id="convert" value="convert"></td>
+        </tr>
+        <tr style="text-align: center">
+            <td colspan="4"> <p id="result"></p> </td>
+        </tr>
+    </table>
+    <script>
+        let button = document.getElementById('convert');
+        button.addEventListener('click',function () {
+            let amount = document.getElementById('amount').value;
+            let a;
+            let b;
+            let Fromcurrency = document.getElementById('FC').value;
+            let Tocurrency = document.getElementById('TC').value;
+            switch (Fromcurrency) {
+                case 'vnd':
+                    a = 1;
+                    break;
+                case 'usd':
+                    a = 23000;
+                    break;
+                case 'eur':
+                    a = 27000;
+                    break;
+            }
+            switch (Tocurrency) {
+                case 'vnd':
+                    b = 1;
+                    break;
+                case 'usd':
+                    b = 23000;
+                    break;
+                case 'eur':
+                    b = 27000;
+                    break;
+            }
+            document.getElementById('result').innerHTML = (amount * a / b).toString();
+        }
+        )
+    </script>
+</form>
+</body>
+</html>
