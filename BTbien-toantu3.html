@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>converter</title>
+    <style>
+        td{
+            width: 300px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+<table border="1px solid black" style="text-align: center" width="200px" >
+    <tr>
+        <td>Nhập chiều dài bán kính: </td>
+        <td><input type="number" id="lenght" value="1"></td>
+    </tr>
+    <tr>
+        <td>Diện tích:</td>
+        <td><p id="result" style="..."> </p></td>
+    </tr>
+    <tr>
+        <td><input type="reset"></td>
+        <td><input type="button" id="calcu" value="calcu"></td>
+    </tr>
+</table>
+</body>
+<script>
+    let button = document.getElementById('calcu');
+    button.addEventListener('click', function () {
+        let lenght = +document.getElementById('lenght').value;
+        let pi = 3.14;
+        document.getElementById('result').innerHTML = (lenght)*(lenght)*pi;
+    })
+</script>
+</html>
+</body>
+</html>
