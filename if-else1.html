@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyen if else</title>
+</head>
+<body>
+<script>
+    let admin = prompt('Tên đăng nhập: ');
+    if (admin == 'Admin') {
+        let Password = prompt('Password: ');
+        if (Password == 'TheMaster') {
+            alert('Welcome!');
+        } if (Password == '') {
+            alert('Canceled')
+        } else {
+            alert('Wrong Password');
+        }
+    } else {
+        alert('I dont know u');
+    }
+</script>
+</body>
+</html>
